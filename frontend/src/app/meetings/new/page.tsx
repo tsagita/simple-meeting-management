@@ -18,7 +18,7 @@ const NewMeetingPage = () => {
                 start_time: new Date(data.start_time).toISOString(),
             };
             await http.post('/meetings', formattedData);
-            alert('Meeting created successfully!');
+            window.location.href = '/meetings';
         } catch (error) {
             console.error('Error creating meeting:', error);
         }
