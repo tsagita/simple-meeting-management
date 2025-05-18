@@ -37,7 +37,7 @@ const MeetingsPage = () => {
     setLoadingId(meetingId);
     try {
       await http.delete(`/meetings/${meetingId}`);
-      await fetchMeetings();
+      window.location.href = '/meetings';
     } catch (error) {
       console.error('Error deleting meeting:', error);
       alert('Failed to delete meeting');
